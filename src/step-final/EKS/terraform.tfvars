@@ -4,7 +4,7 @@ iam_profile = "mfa"
 
 # General for all infrastructure
 # This is the name prefix for all infra components
-name = "omarovskiy"
+name = "martianov"
 
 
 #vpc_id      = "vpc-06ae62935ffb33e2b"
@@ -19,7 +19,7 @@ subnets_ids = ["subnet-0f77887c9e69fc162", "subnet-07bea859869364a5e", "subnet-0
 
 
 tags = {
-  Environment = "test-omarovskiy"
+  Environment = "test-martianov"
   TfControl   = "true"
 }
 

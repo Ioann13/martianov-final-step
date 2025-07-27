@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket  = "omarovskiy-final"
+    bucket  = "martianov-final-step"
     key     = "eks/terraform.tfstate"
     encrypt = true
     # dynamodb_table = "lock-tf-eks"
