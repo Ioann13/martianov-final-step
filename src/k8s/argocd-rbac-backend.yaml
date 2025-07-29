@@ -1,7 +1,8 @@
+# role-backend.yaml
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  namespace: backend
+  namespace: default
   name: argocd-backend-role
 rules:
   - apiGroups: [""]
@@ -15,11 +16,13 @@ rules:
     verbs: ["get", "list", "watch"]
 
 ---
+
+# rolebinding-backend.yaml
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
+  namespace: default
   name: argocd-backend-rolebinding
-  namespace: backend
 subjects:
   - kind: ServiceAccount
     name: argocd-application-controller

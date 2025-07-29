@@ -9,14 +9,14 @@ module "eks-external-dns" {
   irsa_role_create        = true
   policy_allowed_zone_ids = ["Z02537122N3YB2GRT9YY1"]
 
-  helm_release_name     = "external-dns-omarovskyi"
-  irsa_role_name_prefix = "external-dns-irsa-omarovskyi"
+  helm_release_name     = "external-dns-martianov"
+  irsa_role_name_prefix = "external-dns-irsa-martianov"
 
   settings = {
     provider    = "aws"
     policy      = "sync"
     registry    = "txt"
-    txtOwnerId  = "danit-devops7"
+    txtOwnerId  = "martianov-devops7"
     awsZoneType = "public"
     logLevel    = "debug"
   }
