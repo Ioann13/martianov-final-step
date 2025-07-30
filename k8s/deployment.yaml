@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: martianov-api
-  namespace: backend
+  namespace: default
   labels:
     app: martianov-api
 spec:
