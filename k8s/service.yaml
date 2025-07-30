@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: martianov-backend
+  name: martianov-api
   namespace: default
 spec:
   selector:
-    app: martianov-backend
+    app: martianov-api
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 8080
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
