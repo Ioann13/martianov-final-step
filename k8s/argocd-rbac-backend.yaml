@@ -3,7 +3,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   namespace: default
-  name: argocd-backend-role
+  name: martianov-backend-role
 rules:
   - apiGroups: [""]
     resources: ["pods", "services", "endpoints", "secrets", "configmaps"]
@@ -22,12 +22,12 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   namespace: default
-  name: argocd-backend-rolebinding
+  name: martianov-backend-rolebinding
 subjects:
   - kind: ServiceAccount
     name: argocd-application-controller
     namespace: argocd
 roleRef:
   kind: Role
-  name: argocd-backend-role
+  name: martianov-backend-role
   apiGroup: rbac.authorization.k8s.io
