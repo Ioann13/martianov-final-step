@@ -21,6 +21,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: python-backend
+            name: martianov-backend
             port:
               number: 80
