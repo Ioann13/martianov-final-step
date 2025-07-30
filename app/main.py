@@ -12,13 +12,13 @@ def get_host_ip():
     <head>
         <style>
             body {{
-                background-color: #d4edda; /* светло-зелёный */
+                background-color: #cce5ff; /* светло-синий */
                 font-size: 24px;
                 font-family: Arial, sans-serif;
                 padding: 20px;
             }}
             strong {{
-                color: #155724;
+                color: #004085; /* тёмно-синий */
             }}
         </style>
     </head>
