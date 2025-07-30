@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: martianov-api
-        image: mdeus666/martianov-backend:final
+        image: deus666/martianov-backend:final
         ports:
         - containerPort: 8080
