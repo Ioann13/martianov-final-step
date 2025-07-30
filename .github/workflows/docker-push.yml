@@ -24,4 +24,4 @@ jobs:
 
     - name: Push Docker image
       run: |
-        docker push ${{ secrets.DOCKER_USERNAME }}/martianov-backend:vo1
+        docker push ${{ secrets.DOCKER_USERNAME }}/martianov-backend:v01
