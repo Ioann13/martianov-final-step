@@ -1,26 +1,22 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: python-backend-ingress
-  namespace: default
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
-    cert-manager.io/cluster-issuer: letsencrypt-prod
-    external-dns.alpha.kubernetes.io/hostname: app.martianov.devops7.test-danit.com
+  name: martianov-api
+  namespace: backend
+  labels:
+    app: martianov-api
 spec:
-  ingressClassName: nginx
-  tls:
-    - hosts:
-        - app.martianov.devops7.test-danit.com
-      secretName: app-martianov-tls
-  rules:
-    - host: app.martianov.devops7.test-danit.com
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: martianov-backend
-                port:
-                  number: 80
+  replicas: 1
+  selector:
+    matchLabels:
+      app: martianov-api
+  template:
+    metadata:
+      labels:
+        app: martianov-api
+    spec:
+      containers:
+      - name: martianov-api
+        image: mdeus666/martianov-backend:final
+        ports:
+        - containerPort: 8080
