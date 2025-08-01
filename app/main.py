@@ -12,7 +12,7 @@ def get_host_ip():
     <head>
         <style>
             body {{
-                background-color: #cce5ff; /* светло-синий */
+                background-color: #d4edda; /* светло-зелёный */
                 font-size: 24px;
                 font-family: Arial, sans-serif;
                 padding: 20px;
